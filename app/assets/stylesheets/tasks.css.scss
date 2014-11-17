@@ -1,13 +1,14 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$primary-color: #699;
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
 #tasks {
   h1 {
-    color: #699;
+    color: $primary-color;
   }
 
   ul li {
@@ -19,7 +20,7 @@ body {
       text-decoration: none;
 
       &:hover {
-        background: lighten(#699, 40%);
+        background: lighten($primary-color, 40%);
       }
     }
   }
