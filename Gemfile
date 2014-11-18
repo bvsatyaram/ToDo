@@ -48,3 +48,5 @@ end
 
 gem 'annotate'
 gem 'simple_form'
+gem 'devise'
+gem 'cancancan'

@@ -6,11 +6,23 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+def dot
+  print "."
+end
+
+User.create(email: "bv@gm.com", password: "secret123", password_confirmation: "secret123")
 
 def create_task(title, done = false)
   task = Task.find_or_create_by(title: title)
-  task.update_attributes(done: done)
+  task.done = done
+  task.user = User.where(email: "bv@gm.com").first
+  task.save
+  dot
 end
 
+puts ""
+print "Seeding data"
 create_task("Clean the board")
 create_task("Get a maid")
+puts ""
+puts "Seeding Done!"
